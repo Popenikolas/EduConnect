@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+  <!-- Custom Objects -->
+  <types>
+    <members>*</members>
+    <name>CustomObject</name>
+  </types>
+
+  <!-- Profiles -->
+  <types>
+    <members>*</members>
+    <name>Profile</name>
+  </types>
+
+  <!-- Roles -->
+  <types>
+    <members>*</members>
+    <name>Role</name>
+  </types>
+
+  <!-- Permission Sets -->
+  <types>
+    <members>*</members>
+    <name>PermissionSet</name>
+  </types>
+
+  <!-- Sharing Rules -->
+  <types>
+    <members>*</members>
+    <name>SharingRules</name>
+  </types>
+
+  <!-- Public Groups -->
+  <types>
+    <members>*</members>
+    <name>Group</name>
+  </types>
+
+  <!-- Settings (includes business hours, holidays, org prefs, etc.) -->
+  <types>
+    <members>*</members>
+    <name>Settings</name>
+  </types>
+
+  <version>56.0</version>
+</Package>
