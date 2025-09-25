@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Housing_Status__c</fullName>
+    <label>Housing Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>On-Campus</fullName>
+                <default>false</default>
+                <label>On-Campus</label>
+            </value>
+            <value>
+                <fullName>Off-Campus</fullName>
+                <default>false</default>
+                <label>Off-Campus</label>
+            </value>
+            <value>
+                <fullName>Commuter</fullName>
+                <default>false</default>
+                <label>Commuter</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

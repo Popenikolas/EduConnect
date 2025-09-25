@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Faculty member responsible for student academic support</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Faculty Advisor</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Academic_Dean</parentRole>
+</Role>

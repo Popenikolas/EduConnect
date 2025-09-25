@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Enrollment_Date</fullName>
+    <active>true</active>
+    <description>Enrollment date must be before expected graduation</description>
+    <errorConditionFormula>Enrollment_Date__c &gt; Expected_Graduation__c</errorConditionFormula>
+    <errorDisplayField>Expected_Graduation__c</errorDisplayField>
+    <errorMessage>Enrollment date cannot be after expected graduation date</errorMessage>
+</ValidationRule>

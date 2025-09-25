@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Student__c.Student_ID__c</field>
+    </columns>
+    <columns>
+        <field>Student__c.GPA__c</field>
+    </columns>
+    <columns>
+        <field>Student__c.Risk_Level__c</field>
+    </columns>
+    <columns>
+        <field>Student__c.Academic_Status__c</field>
+    </columns>
+    <description>Student risk assessment and academic status report</description>
+    <format>Tabular</format>
+    <name>Student Risk Assessment Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Student__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Student__c.GPA__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

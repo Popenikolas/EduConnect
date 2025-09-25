@@ -1,0 +1,44 @@
+.risk-card {
+    border-left: 4px solid #e5e5e5;
+}
+
+.risk-card.high-risk {
+    border-left-color: #d73c42;
+}
+
+.risk-card.medium-risk {
+    border-left-color: #ff9500;
+}
+
+.risk-card.low-risk {
+    border-left-color: #2e844a;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #080707;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #706e6b;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+}
+
+.slds-text-color_error {
+    color: #d73c42 !important;
+}
+
+.slds-text-color_warning {
+    color: #ff9500 !important;
+}
+
+.slds-text-color_success {
+    color: #2e844a !important;
+}
+
+.slds-text-title_bold {
+    font-weight: bold !important;
+}

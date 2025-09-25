@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alumni_Summary</fullName>
+    <fields>First_Name__c</fields>
+    <fields>Last_Name__c</fields>
+    <fields>Graduation_Dat__c</fields>
+    <fields>Current_Company__c</fields>
+    <fields>Engagement_Score__c</fields>
+    <fields>Willing_to_Mentor__c</fields>
+    <label>Alumni Summary</label>
+</CompactLayout>

@@ -1,0 +1,54 @@
+.risk-container {
+    padding: 1rem;
+}
+
+.gauge-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.risk-gauge {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid;
+    margin-bottom: 0.5rem;
+}
+
+.risk-gauge.high-risk { border-color: #c23934; background-color: rgba(194, 57, 52, 0.1); }
+.risk-gauge.moderate-risk { border-color: #ff9500; background-color: rgba(255, 149, 0, 0.1); }
+.risk-gauge.low-risk { border-color: #4bca81; background-color: rgba(75, 202, 129, 0.1); }
+
+.gauge-value { font-size: 2.5rem; font-weight: bold; line-height: 1; }
+.gauge-label { font-size: 0.875rem; font-weight: 500; }
+
+.risk-level { font-weight: bold; font-size: 1.125rem; margin-bottom: 1rem; }
+.risk-level.high { color: #c23934; }
+.risk-level.moderate { color: #ff9500; }
+.risk-level.low { color: #4bca81; }
+
+.risk-factors { margin-bottom: 1rem; }
+.risk-factors h3 { margin-bottom: 0.5rem; font-size: 1.125rem; font-weight: 600; }
+
+.factor-high-risk, .factor-moderate-risk, .factor-normal {
+    display: flex; align-items: center; padding: 0.5rem; margin: 0.25rem 0; border-radius: 4px; gap: 0.5rem;
+}
+
+.factor-high-risk { background-color: rgba(194, 57, 52, 0.1); border-left: 4px solid #c23934; }
+.factor-moderate-risk { background-color: rgba(255, 149, 0, 0.1); border-left: 4px solid #ff9500; }
+.factor-normal { background-color: rgba(75, 202, 129, 0.1); border-left: 4px solid #4bca81; }
+
+.factor-label { font-weight: 500; flex: 1; }
+.factor-value { font-weight: 600; }
+
+.action-buttons { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; }
+
+@media (max-width: 768px) {
+    .action-buttons { flex-direction: column; }
+    .risk-gauge { width: 100px; height: 100px; }
+    .gauge-value { font-size: 2rem; }
+}

@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CompanySettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableCustomFiscalYear>true</enableCustomFiscalYear>
+    <enableCustomizeMyTabs>true</enableCustomizeMyTabs>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableEnhancedProfileMgmt>true</enableEnhancedProfileMgmt>
+    <enableGroupTasks>true</enableGroupTasks>
+    <enableListCustomSettingCreation>true</enableListCustomSettingCreation>
+    <enableOrgWideEmail>true</enableOrgWideEmail>
+    <enableRecentlyViewedForDupeCatcher>true</enableRecentlyViewedForDupeCatcher>
+    <enableSetAuditFields>true</enableSetAuditFields>
+    <enableStreamingApi>true</enableStreamingApi>
+    <enableSubscriptionRecordTypeAccess>true</enableSubscriptionRecordTypeAccess>
+    <enableTasksAndEventsForYourOrg>true</enableTasksAndEventsForYourOrg>
+    <fiscalYear>
+        <fiscalYearNameBasedOn>EndingMonth</fiscalYearNameBasedOn>
+        <startMonth>January</startMonth>
+    </fiscalYear>
 </CompanySettings>

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Student Data">
+        <div class="slds-p-around_medium">
+            <p><strong>Open Support Cases:</strong> {caseCount}</p>
+
+            <template if:true={hasOpenCases}>
+                <ul>
+                    <template for:each={supportCases.data} for:item="c">
+                        <li key={c.Id}>{c.Subject} - {c.Status}</li>
+                    </template>
+                </ul>
+            </template>
+
+            <lightning-button label="Refresh" onclick={handleRefresh}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Academic_Status_GPA_Alignment</fullName>
+    <active>true</active>
+    <description>Ensures academic status aligns with current GPA performance</description>
+    <errorConditionFormula>OR(
+  AND(ISPICKVAL(Academic_Status__c, &quot;Active&quot;), Current_GPA__c &lt; 1.5),
+  AND(ISPICKVAL(Academic_Status__c, &quot;Academic Probation&quot;), 
+      OR(Current_GPA__c &gt;= 2.5, Current_GPA__c &lt; 1.0)),
+  AND(ISPICKVAL(Academic_Status__c, &quot;Academic Suspension&quot;), Current_GPA__c &gt;= 2.0)
+)</errorConditionFormula>
+    <errorDisplayField>Academic_Status__c</errorDisplayField>
+    <errorMessage>Academic status does not match GPA requirements. Students with GPA below 1.5 should be suspended, 1.5-2.5 on probation.</errorMessage>
+</ValidationRule>

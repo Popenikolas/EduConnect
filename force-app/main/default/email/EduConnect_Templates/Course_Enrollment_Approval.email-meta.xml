@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email template for course enrollment approval notifications</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Course Enrollment Approval</name>
+    <style>none</style>
+    <subject>Course Enrollment Request Requires Approval - {!Student__c.Name}</subject>
+    <textOnly>Dear Academic Advisor,
+
+A course enrollment request for {!Student__c.Name} (ID: {!Student__c.Student_ID__c}) requires your approval.
+
+Student Details:
+- Name: {!Student__c.Name}
+- Current GPA: {!Student__c.GPA__c}
+- Year Level: {!Student__c.Year_Level__c}
+- Academic Status: {!Student__c.Academic_Status__c}
+
+Please review this enrollment request and take appropriate action.
+
+To review and approve/reject this request, please log into Salesforce and navigate to the approval requests.
+
+Best regards,
+EduConnect Student Success Platform</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

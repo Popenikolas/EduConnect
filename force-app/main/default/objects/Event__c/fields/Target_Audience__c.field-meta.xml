@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Audience__c</fullName>
+    <label>Target Audience</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Current Students</fullName>
+                <default>false</default>
+                <label>Current Students</label>
+            </value>
+            <value>
+                <fullName>Alumni</fullName>
+                <default>false</default>
+                <label>Alumni</label>
+            </value>
+            <value>
+                <fullName>Faculty</fullName>
+                <default>false</default>
+                <label>Faculty</label>
+            </value>
+            <value>
+                <fullName>Prospective Students</fullName>
+                <default>false</default>
+                <label>Prospective Students</label>
+            </value>
+            <value>
+                <fullName>Industry Partners</fullName>
+                <default>false</default>
+                <label>Industry Partners</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

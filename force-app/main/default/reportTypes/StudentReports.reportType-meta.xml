@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Student__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Students with their academic information and risk assessment data</description>
+    <label>Students</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Name</field>
+            <table>Student__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Student_ID__c</field>
+            <table>Student__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>GPA__c</field>
+            <table>Student__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Risk_Score__c</field>
+            <table>Student__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Risk_Level__c</field>
+            <table>Student__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Academic_Status__c</field>
+            <table>Student__c</table>
+        </columns>
+        <masterLabel>Students</masterLabel>
+    </sections>
+</ReportType>

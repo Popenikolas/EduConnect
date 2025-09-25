@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recent_Graduate</fullName>
+    <active>true</active>
+    <description>Alumni who graduated within the last 5 years</description>
+    <label>Recent Graduate</label>
+    <picklistValues>
+        <picklist>Annual_Salary_Range__c</picklist>
+        <values>
+            <fullName>%24100K - %24150K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%24150K - %24200K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2430K - %2450K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2450K - %2475K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2475K - %24100K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Over %24200K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prefer not to say</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under %2430K</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Communication_Preference__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University Events</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interests__c</picklist>
+        <values>
+            <fullName>Alumni Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Mentoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Curriculum Advisory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fundraising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guest Speaking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry Connections</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Recruitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volunteer Work</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Work_Industry__c</picklist>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

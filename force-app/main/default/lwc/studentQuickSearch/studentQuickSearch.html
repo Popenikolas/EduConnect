@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Student Quick Search">
+        <div class="slds-p-around_medium">
+            <lightning-input 
+                label="Search Students" 
+                value={searchTerm} 
+                onchange={handleSearchInput}>
+            </lightning-input>
+
+            <template if:true={isSearching}>
+                <p>Searching...</p>
+            </template>
+
+            <template if:true={searchResults}>
+                <ul>
+                    <template for:each={searchResults} for:item="student">
+                        <li key={student.Id} data-student-id={student.Id} onclick={handleStudentSelect}>
+                            {student.Name} - <span class={student.riskLevelClass}>{student.riskScore}</span>
+                        </li>
+                    </template>
+                </ul>
+            </template>
+        </div>
+    </lightning-card>
+</template>

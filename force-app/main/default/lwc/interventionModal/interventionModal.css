@@ -1,0 +1,39 @@
+.intervention-form {
+    min-height: 300px;
+}
+
+.slds-modal__container {
+    max-width: 800px;
+}
+
+.slds-modal__title {
+    color: #c23934;
+    font-weight: 600;
+}
+
+.intervention-form .slds-form-element__label {
+    font-weight: 500;
+}
+
+.slds-modal__footer {
+    background: #fafaf9;
+    border-top: 1px solid #e5e5e5;
+}
+
+.slds-modal__header {
+    background: #fef7f7;
+    border-bottom: 1px solid #c23934;
+}
+
+@media (max-width: 768px) {
+    .slds-modal__container {
+        margin: 0;
+        max-width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+    
+    .slds-modal {
+        height: 100vh;
+    }
+}

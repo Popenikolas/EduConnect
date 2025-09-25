@@ -1,0 +1,16 @@
+.student-container {
+    padding: 1rem;
+}
+
+p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+strong {
+    color: #16325c;
+}
+
+.lightning-card {
+    margin-bottom: 1rem;
+}

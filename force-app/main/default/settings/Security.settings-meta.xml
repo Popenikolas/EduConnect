@@ -9,14 +9,14 @@
     <enableRequireHttpsConnection>true</enableRequireHttpsConnection>
     <networkAccess/>
     <passwordPolicies>
-        <complexity>AlphaNumeric</complexity>
+        <complexity>SpecialCharacters</complexity>
         <expiration>NinetyDays</expiration>
-        <historyRestriction>3</historyRestriction>
-        <lockoutInterval>FifteenMinutes</lockoutInterval>
-        <maxLoginAttempts>TenAttempts</maxLoginAttempts>
-        <minimumPasswordLength>8</minimumPasswordLength>
-        <minimumPasswordLifetime>false</minimumPasswordLifetime>
-        <obscureSecretAnswer>false</obscureSecretAnswer>
+        <historyRestriction>5</historyRestriction>
+        <lockoutInterval>ThirtyMinutes</lockoutInterval>
+        <maxLoginAttempts>FiveAttempts</maxLoginAttempts>
+        <minimumPasswordLength>10</minimumPasswordLength>
+        <minimumPasswordLifetime>true</minimumPasswordLifetime>
+        <obscureSecretAnswer>true</obscureSecretAnswer>
         <questionRestriction>DoesNotContainPassword</questionRestriction>
     </passwordPolicies>
     <redirectBlockModeEnabled>false</redirectBlockModeEnabled>

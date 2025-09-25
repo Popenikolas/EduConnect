@@ -1,0 +1,28 @@
+<template>
+    <div class="dashboard-container">
+        <!-- Student Risk Component -->
+        <c-student-risk-indicator
+            record-id={recordId}
+            refresh-trigger={refreshTrigger}
+            oncasecreated={handleCaseCreated}
+            onalertrequested={handleRiskAlertRequested}>
+        </c-student-risk-indicator>
+
+        <!-- Support Cases List -->
+        <c-support-cases-list
+            student-id={recordId}
+            refresh-trigger={refreshTrigger}>
+        </c-support-cases-list>
+
+       
+
+        <!-- Intervention Modal -->
+        <template if:true={showInterventionModal}>
+            <c-intervention-modal
+                student-data={selectedStudent}
+                onclose={handleModalClose}
+                oninterventioncomplete={handleInterventionComplete}>
+            </c-intervention-modal>
+        </template>
+    </div>
+</template>

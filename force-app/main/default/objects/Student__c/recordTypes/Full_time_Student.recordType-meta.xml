@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Full_time_Student</fullName>
+    <active>true</active>
+    <description>Full-time enrolled students</description>
+    <label>Full-time Student</label>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Enrolled</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graduated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Enrollment_Type__c</picklist>
+        <values>
+            <fullName>Full-time</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

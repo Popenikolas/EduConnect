@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Student Overview" icon-name="standard:student">
+        <div class="student-container">
+            <template if:true={_studentData}>
+                <p><strong>Name:</strong> {_studentData.fields.Name.value}</p>
+                <p><strong>Risk Score:</strong> {_studentData.fields.Risk_Score__c.value}</p>
+                <p><strong>Risk Level:</strong> {riskAssessment}</p>
+                <p><strong>GPA:</strong> {_studentData.fields.Current_GPA__c.value}</p>
+                <p><strong>Status:</strong> {_studentData.fields.Academic_Status__c.value}</p>
+
+                <template if:true={_additionalData}>
+                    <p><strong>Credits in Progress:</strong> {_additionalData.credits}</p>
+                    <p><strong>Advisor:</strong> {_additionalData.advisorName}</p>
+                </template>
+
+                <template if:true={isLoading}>
+                    <p>Loading additional info...</p>
+                </template>
+            </template>
+
+            <template if:false={_studentData}>
+                <p>Loading student data...</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

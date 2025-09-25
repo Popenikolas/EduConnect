@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Student_Support_Case</fullName>
+    <active>true</active>
+    <label>Student Support Case</label>
+    <picklistValues>
+        <picklist>Case_Type__c</picklist>
+        <values>
+            <fullName>Academic Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Guidance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disciplinary Matter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Aid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graduation Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Housing Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mental Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Support</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Academic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mental Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

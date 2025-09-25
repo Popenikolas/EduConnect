@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GPA_Range_Validation</fullName>
+    <active>true</active>
+    <description>Ensures GPA is between 0.0 and 4.0</description>
+    <errorConditionFormula>OR(GPA__c &lt; 0, GPA__c &gt; 4.0)</errorConditionFormula>
+    <errorDisplayField>GPA__c</errorDisplayField>
+    <errorMessage>GPA must be between 0.0 and 4.0</errorMessage>
+</ValidationRule>

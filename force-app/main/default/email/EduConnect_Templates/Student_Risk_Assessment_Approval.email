@@ -1,0 +1,15 @@
+Dear Academic Advisor,
+
+A student risk assessment for {!Student__c.Name} (ID: {!Student__c.Student_ID__c}) requires your approval.
+
+Risk Level: {!Student__c.Risk_Level__c}
+Risk Score: {!Student__c.Risk_Score__c}
+Academic Status: {!Student__c.Academic_Status__c}
+Current GPA: {!Student__c.GPA__c}
+
+Please review this assessment and take appropriate action.
+
+To review and approve/reject this request, please log into Salesforce and navigate to the approval requests.
+
+Best regards,
+EduConnect Student Success Platform

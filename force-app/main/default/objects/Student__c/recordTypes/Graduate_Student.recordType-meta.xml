@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Graduate_Student</fullName>
+    <active>true</active>
+    <description>For graduate and doctoral students</description>
+    <label>Graduate Student</label>
+    <picklistValues>
+        <picklist>Academic_Status__c</picklist>
+        <values>
+            <fullName>Academic Probation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Academic Suspension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graduated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Class_Level__c</picklist>
+        <values>
+            <fullName>Doctoral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graduate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Emergency_Contact_Relationship__c</picklist>
+        <values>
+            <fullName>Guardian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Family</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sibling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spouse</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Gender__c</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prefer not to say</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Housing_Status__c</picklist>
+        <values>
+            <fullName>Commuter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Off-Campus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On-Campus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Preferred_Communication__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portal Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Year_Level__c</picklist>
+        <values>
+            <fullName>1st Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2nd Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4th Year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5th Year%2B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

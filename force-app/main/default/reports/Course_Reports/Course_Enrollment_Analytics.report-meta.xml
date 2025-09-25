@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>GRAND_SUMMARY</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Enrollment Count</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <field>Course_Enrollment__c$Name</field>
+    </columns>
+    <columns>
+        <field>Course_Enrollment__c$Student__c</field>
+    </columns>
+    <columns>
+        <field>Course_Enrollment__c$Course__c</field>
+    </columns>
+    <columns>
+        <field>Course_Enrollment__c$Enrollment_Date__c</field>
+    </columns>
+    <columns>
+        <field>Course_Enrollment__c$Grade__c</field>
+    </columns>
+    <columns>
+        <field>Course_Enrollment__c$Enrollment_Status__c</field>
+    </columns>
+    <description>Course enrollment analytics and grade distribution report</description>
+    <filter>
+        <criteriaItems>
+            <column>Course_Enrollment__c$Enrollment_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Draft</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Course_Enrollment__c$Course__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Course_Enrollment__c$Grade__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Course Enrollment Analytics</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Course_Enrollment__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Course_Enrollment__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

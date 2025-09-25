@@ -1,0 +1,109 @@
+<template>
+    <lightning-card title="Course Enrollment" icon-name="standard:education">
+        <div class="slds-p-horizontal_small">
+            <lightning-layout multiple-rows="true">
+                <!-- Student Search -->
+                <lightning-layout-item size="12" class="slds-p-bottom_medium">
+                    <lightning-input
+                        label="Student Search"
+                        placeholder="Search by name or student ID..."
+                        value={searchTerm}
+                        onchange={handleStudentSearch}>
+                    </lightning-input>
+                </lightning-layout-item>
+
+                <!-- Student Selection -->
+                <lightning-layout-item size="6" class="slds-p-right_small">
+                    <lightning-combobox
+                        name="student"
+                        label="Select Student"
+                        value={selectedStudentId}
+                        placeholder="Choose a student..."
+                        options={studentOptions}
+                        onchange={handleStudentChange}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+
+                <!-- Course Selection -->
+                <lightning-layout-item size="6" class="slds-p-left_small">
+                    <lightning-combobox
+                        name="course"
+                        label="Select Course"
+                        value={selectedCourseId}
+                        placeholder="Choose a course..."
+                        options={courseOptions}
+                        onchange={handleCourseChange}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+
+                <!-- Enrollment Details -->
+                <lightning-layout-item size="6" class="slds-p-right_small slds-p-top_medium">
+                    <lightning-input
+                        label="Enrollment Date"
+                        type="date"
+                        value={enrollmentDate}
+                        onchange={handleEnrollmentDateChange}>
+                    </lightning-input>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="6" class="slds-p-left_small slds-p-top_medium">
+                    <lightning-combobox
+                        name="status"
+                        label="Enrollment Status"
+                        value={enrollmentStatus}
+                        options={statusOptions}
+                        onchange={handleStatusChange}>
+                    </lightning-combobox>
+                </lightning-layout-item>
+
+                <!-- Course Information Display -->
+                <lightning-layout-item size="12" class="slds-p-top_medium" if:true={selectedCourseInfo}>
+                    <lightning-card title="Course Information">
+                        <div class="slds-p-horizontal_medium">
+                            <dl class="slds-list_horizontal slds-wrap">
+                                <dt class="slds-item_label slds-text-color_weak slds-truncate">Course Code:</dt>
+                                <dd class="slds-item_detail slds-truncate">{selectedCourseInfo.courseCode}</dd>
+                                <dt class="slds-item_label slds-text-color_weak slds-truncate">Credits:</dt>
+                                <dd class="slds-item_detail slds-truncate">{selectedCourseInfo.credits}</dd>
+                                <dt class="slds-item_label slds-text-color_weak slds-truncate">Max Enrollment:</dt>
+                                <dd class="slds-item_detail slds-truncate">{selectedCourseInfo.maxEnrollment}</dd>
+                                <dt class="slds-item_label slds-text-color_weak slds-truncate">Current Enrollment:</dt>
+                                <dd class="slds-item_detail slds-truncate">{selectedCourseInfo.currentEnrollment}</dd>
+                            </dl>
+                        </div>
+                    </lightning-card>
+                </lightning-layout-item>
+
+                <!-- Action Buttons -->
+                <lightning-layout-item size="12" class="slds-p-top_medium">
+                    <div class="slds-text-align_center">
+                        <lightning-button
+                            label="Enroll Student"
+                            onclick={handleEnrollStudent}
+                            variant="brand"
+                            disabled={isEnrollDisabled}
+                            class="slds-m-right_small">
+                        </lightning-button>
+                        <lightning-button
+                            label="Clear"
+                            onclick={handleClear}
+                            variant="neutral">
+                        </lightning-button>
+                    </div>
+                </lightning-layout-item>
+
+                <!-- Recent Enrollments -->
+                <lightning-layout-item size="12" class="slds-p-top_large" if:true={recentEnrollments.length}>
+                    <lightning-card title="Recent Enrollments">
+                        <lightning-datatable
+                            data={recentEnrollments}
+                            columns={enrollmentColumns}
+                            key-field="Id"
+                            hide-checkbox-column="true">
+                        </lightning-datatable>
+                    </lightning-card>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

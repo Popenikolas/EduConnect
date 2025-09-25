@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Risk Assessment" icon-name="utility:warning">
+        <div class="risk-container">
+            <!-- Risk Gauge -->
+            <div class="gauge-container">
+                <div class={riskGaugeClass}>
+                    <div class="gauge-value">{riskScore}</div>
+                    <div class="gauge-label">Risk Score</div>
+                </div>
+                <div class={riskLevelClass}>{riskLevel}</div>
+            </div>
+
+            <!-- Risk Factors -->
+            <div class="risk-factors">
+                <h3>Risk Factors</h3>
+                <template for:each={riskFactors} for:item="factor">
+                    <div key={factor.id} class={factor.cssClass}>
+                        <lightning-icon icon-name={factor.icon} size="x-small" variant={factor.variant}></lightning-icon>
+                        <span class="factor-label">{factor.label}</span>
+                        <span class="factor-value">{factor.value}</span>
+                    </div>
+                </template>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <lightning-button label="Create Case" variant="brand" onclick={handleCreateCase}></lightning-button>
+                <lightning-button label="Send Alert" variant="destructive" onclick={handleSendAlert}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interests__c</fullName>
+    <label>Interests</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Career Mentoring</fullName>
+                <default>false</default>
+                <label>Career Mentoring</label>
+            </value>
+            <value>
+                <fullName>Student Recruitment</fullName>
+                <default>false</default>
+                <label>Student Recruitment</label>
+            </value>
+            <value>
+                <fullName>Guest Speaking</fullName>
+                <default>false</default>
+                <label>Guest Speaking</label>
+            </value>
+            <value>
+                <fullName>Curriculum Advisory</fullName>
+                <default>false</default>
+                <label>Curriculum Advisory</label>
+            </value>
+            <value>
+                <fullName>Industry Connections</fullName>
+                <default>false</default>
+                <label>Industry Connections</label>
+            </value>
+            <value>
+                <fullName>Alumni Events</fullName>
+                <default>false</default>
+                <label>Alumni Events</label>
+            </value>
+            <value>
+                <fullName>Fundraising</fullName>
+                <default>false</default>
+                <label>Fundraising</label>
+            </value>
+            <value>
+                <fullName>Volunteer Work</fullName>
+                <default>false</default>
+                <label>Volunteer Work</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

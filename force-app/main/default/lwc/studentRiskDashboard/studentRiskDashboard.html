@@ -1,0 +1,98 @@
+<template>
+    <lightning-card title="Student Risk Dashboard" icon-name="custom:custom63">
+        <div class="slds-p-horizontal_small">
+            <lightning-layout multiple-rows="true">
+                <!-- Filters -->
+                <lightning-layout-item size="12" class="slds-p-bottom_medium">
+                    <lightning-layout horizontal-align="spread">
+                        <lightning-layout-item>
+                            <lightning-combobox
+                                name="riskLevel"
+                                label="Risk Level"
+                                value={selectedRiskLevel}
+                                placeholder="All Risk Levels"
+                                options={riskLevelOptions}
+                                onchange={handleRiskLevelChange}>
+                            </lightning-combobox>
+                        </lightning-layout-item>
+                        <lightning-layout-item>
+                            <lightning-combobox
+                                name="academicStatus"
+                                label="Academic Status"
+                                value={selectedAcademicStatus}
+                                placeholder="All Statuses"
+                                options={academicStatusOptions}
+                                onchange={handleAcademicStatusChange}>
+                            </lightning-combobox>
+                        </lightning-layout-item>
+                        <lightning-layout-item>
+                            <lightning-button
+                                label="Refresh"
+                                onclick={handleRefresh}
+                                variant="brand"
+                                class="slds-m-top_large">
+                            </lightning-button>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </lightning-layout-item>
+
+                <!-- Statistics Cards -->
+                <lightning-layout-item size="3" class="slds-p-right_small">
+                    <lightning-card title="High Risk" class="risk-card high-risk">
+                        <div class="slds-text-align_center slds-p-around_medium">
+                            <div class="stat-number">{highRiskCount}</div>
+                            <div class="stat-label">Students</div>
+                        </div>
+                    </lightning-card>
+                </lightning-layout-item>
+                
+                <lightning-layout-item size="3" class="slds-p-horizontal_x-small">
+                    <lightning-card title="Medium Risk" class="risk-card medium-risk">
+                        <div class="slds-text-align_center slds-p-around_medium">
+                            <div class="stat-number">{mediumRiskCount}</div>
+                            <div class="stat-label">Students</div>
+                        </div>
+                    </lightning-card>
+                </lightning-layout-item>
+                
+                <lightning-layout-item size="3" class="slds-p-horizontal_x-small">
+                    <lightning-card title="Low Risk" class="risk-card low-risk">
+                        <div class="slds-text-align_center slds-p-around_medium">
+                            <div class="stat-number">{lowRiskCount}</div>
+                            <div class="stat-label">Students</div>
+                        </div>
+                    </lightning-card>
+                </lightning-layout-item>
+                
+                <lightning-layout-item size="3" class="slds-p-left_small">
+                    <lightning-card title="Total Students" class="risk-card">
+                        <div class="slds-text-align_center slds-p-around_medium">
+                            <div class="stat-number">{totalStudents}</div>
+                            <div class="stat-label">Students</div>
+                        </div>
+                    </lightning-card>
+                </lightning-layout-item>
+
+                <!-- Data Table -->
+                <lightning-layout-item size="12" class="slds-p-top_medium">
+                    <lightning-card title="At-Risk Students">
+                        <div if:true={isLoading} class="slds-text-align_center slds-p-around_medium">
+                            <lightning-spinner alternative-text="Loading..."></lightning-spinner>
+                        </div>
+                        
+                        <div if:false={isLoading}>
+                            <lightning-datatable
+                                data={students}
+                                columns={columns}
+                                key-field="Id"
+                                hide-checkbox-column="true"
+                                show-row-number-column="true"
+                                onrowaction={handleRowAction}>
+                            </lightning-datatable>
+                        </div>
+                    </lightning-card>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

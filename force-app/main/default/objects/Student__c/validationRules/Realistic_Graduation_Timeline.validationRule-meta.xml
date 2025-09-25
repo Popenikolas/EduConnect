@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Realistic_Graduation_Timeline</fullName>
+    <active>true</active>
+    <description>Ensures graduation date is realistic based on enrollment</description>
+    <errorConditionFormula>OR(
+  Expected_Graduation__c &lt;= Enrollment_Date__c,
+  Expected_Graduation__c &gt; (Enrollment_Date__c + (365 * 8))
+)</errorConditionFormula>
+    <errorDisplayField>Expected_Graduation__c</errorDisplayField>
+    <errorMessage>Expected graduation date must be after enrollment date and within 8 years.</errorMessage>
+</ValidationRule>

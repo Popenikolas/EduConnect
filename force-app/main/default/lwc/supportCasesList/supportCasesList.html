@@ -1,0 +1,82 @@
+<template>
+    <div class="support-cases-container">
+        <div class="cases-header">
+            <h3 class="cases-title">Open Support Cases</h3>
+            <lightning-button 
+                label="New Case" 
+                variant="brand" 
+                onclick={handleCreateNewCase}
+                class="new-case-button">
+            </lightning-button>
+        </div>
+        
+        <template if:true={isLoading}>
+            <div class="loading-container">
+                <lightning-spinner alternative-text="Loading cases..." size="small"></lightning-spinner>
+            </div>
+        </template>
+        
+        <template if:true={hasCases}>
+            <div class="cases-list">
+                <template for:each={casesWithPriorityClass} for:item="supportCase">
+                    <div key={supportCase.Id} class="case-card" data-case-id={supportCase.Id} onclick={handleCaseClick}>
+                        <div class="case-header">
+                            <div class="case-priority">
+                                <lightning-icon 
+                                    icon-name={supportCase.priorityIcon} 
+                                    size="x-small" 
+                                    class={supportCase.priorityClass}>
+                                </lightning-icon>
+                                <span class={supportCase.priorityClass}>{supportCase.Priority__c}</span>
+                            </div>
+                            <div class="case-date">{supportCase.formattedDate}</div>
+                        </div>
+                        
+                        <div class="case-content">
+                            <h4 class="case-subject">{supportCase.Subject__c}</h4>
+                            <div class="case-details">
+                                <div class="case-category">
+                                    <span class="label">Category:</span>
+                                    <span class="value">{supportCase.Category__c}</span>
+                                </div>
+                                <div class="case-status">
+                                    <span class="label">Status:</span>
+                                    <span class="value">{supportCase.Status__c}</span>
+                                </div>
+                                <template if:true={supportCase.Assigned_To__r.Name}>
+                                    <div class="case-assignee">
+                                        <span class="label">Assigned to:</span>
+                                        <span class="value">{supportCase.Assigned_To__r.Name}</span>
+                                    </div>
+                                </template>
+                            </div>
+                            
+                            <template if:true={supportCase.Description__c}>
+                                <div class="case-description">
+                                    <p>{supportCase.Description__c}</p>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+        
+        <template if:false={hasCases}>
+            <template if:false={isLoading}>
+                <div class="no-cases">
+                    <lightning-icon icon-name="utility:check" size="large" class="no-cases-icon"></lightning-icon>
+                    <h3>No Open Support Cases</h3>
+                    <p>This student currently has no open support cases.</p>
+                </div>
+            </template>
+        </template>
+        
+        <template if:true={error}>
+            <div class="error-container">
+                <lightning-icon icon-name="utility:error" variant="error" size="small"></lightning-icon>
+                <p class="error-message">Error loading support cases. Please try refreshing the page.</p>
+            </div>
+        </template>
+    </div>
+</template>

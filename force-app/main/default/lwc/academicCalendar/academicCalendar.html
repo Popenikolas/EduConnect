@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Academic Calendar">
+        <div class="calendar-container">
+            <button onclick={handlePreviousMonth}>&lt;</button>
+            <span>{formattedMonthYear}</span>
+            <button onclick={handleNextMonth}>&gt;</button>
+
+            <ul>
+                <template for:each={calendarEvents} for:item="event">
+                    <li key={event.Id} class={event.cssClass}>
+                        {event.Name} ({event.eventDate})
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </lightning-card>
+</template>

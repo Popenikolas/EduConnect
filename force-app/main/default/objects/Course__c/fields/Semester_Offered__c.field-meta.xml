@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Semester_Offered__c</fullName>
+    <label>Semester Offered</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fall</fullName>
+                <default>false</default>
+                <label>Fall</label>
+            </value>
+            <value>
+                <fullName>Spring</fullName>
+                <default>false</default>
+                <label>Spring</label>
+            </value>
+            <value>
+                <fullName>Summer I</fullName>
+                <default>false</default>
+                <label>Summer I</label>
+            </value>
+            <value>
+                <fullName>Summer II</fullName>
+                <default>false</default>
+                <label>Summer II</label>
+            </value>
+            <value>
+                <fullName>Winter Session</fullName>
+                <default>false</default>
+                <label>Winter Session</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

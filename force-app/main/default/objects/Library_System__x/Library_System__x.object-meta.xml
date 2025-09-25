@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>External object to connect with university library system</description>
+    <externalDataSource>EduConnect_Library_System</externalDataSource>
+    <externalName>library_resources</externalName>
+    <externalRepository>EduConnect_Library_System</externalRepository>
+    <label>Library Resource</label>
+    <nameField>
+        <complianceGroup>None</complianceGroup>
+        <displayFormat>{0}</displayFormat>
+        <externalId>true</externalId>
+        <label>Resource ID</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </nameField>
+    <pluralLabel>Library Resources</pluralLabel>
+    <searchLayouts></searchLayouts>
+</CustomObject>

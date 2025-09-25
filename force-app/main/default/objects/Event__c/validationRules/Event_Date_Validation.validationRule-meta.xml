@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Date_Validation</fullName>
+    <active>true</active>
+    <description>Ensures event start date is in the future for new events</description>
+    <errorConditionFormula>AND(ISNEW(), Start_Date_Time__c &lt; NOW())</errorConditionFormula>
+    <errorDisplayField>Start_Date_Time__c</errorDisplayField>
+    <errorMessage>Event start date must be in the future</errorMessage>
+</ValidationRule>

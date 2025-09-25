@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>role</type>
+        <submitter>Faculty_Advisor</submitter>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Student__c</field>
+        <field>Course__c</field>
+        <field>Enrollment_Date__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>relatedUserField</type>
+                <field>Student__r.Academic_Advisor__c</field>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Academic Advisor reviews enrollment request</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Course_Enrollment__c.Student__r.Academic_Status__c</field>
+                <operation>notEqual</operation>
+                <value>Academic Suspension</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>RejectRecord</ifCriteriaNotMet>
+        <label>Academic Advisor Approval</label>
+        <name>Academic_Advisor_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Approval process for course enrollment requests requiring academic advisor review</description>
+    <emailTemplate>unfiled$public/SupportSelfServiceNewCommentNotificationTemplate</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>AND(
+    NOT(ISBLANK(Student__c)),
+    NOT(ISBLANK(Course__c))
+)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Enrollment_Approved_Email</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Update_Enrollment_Status_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Enrollment_Rejected_Email</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Update_Enrollment_Status_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Enrollment_Submitted_Email</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Update_Enrollment_Status_Submitted</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Course Enrollment Approval</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

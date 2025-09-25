@@ -23,21 +23,21 @@
     <businessHours>
         <active>true</active>
         <default>false</default>
-        <fridayEndTime>18:00:00.000Z</fridayEndTime>
+        <fridayEndTime>17:00:00.000Z</fridayEndTime>
         <fridayStartTime>08:00:00.000Z</fridayStartTime>
-        <mondayEndTime>20:00:00.000Z</mondayEndTime>
+        <mondayEndTime>17:00:00.000Z</mondayEndTime>
         <mondayStartTime>08:00:00.000Z</mondayStartTime>
-        <name>Academic Support Hours</name>
-        <saturdayEndTime>16:00:00.000Z</saturdayEndTime>
-        <saturdayStartTime>10:00:00.000Z</saturdayStartTime>
-        <sundayEndTime>16:00:00.000Z</sundayEndTime>
+        <name>EduConnect Support Hours</name>
+        <saturdayEndTime>14:00:00.000Z</saturdayEndTime>
+        <saturdayStartTime>09:00:00.000Z</saturdayStartTime>
+        <sundayEndTime>00:00:00.000Z</sundayEndTime>
         <sundayStartTime>00:00:00.000Z</sundayStartTime>
-        <thursdayEndTime>20:00:00.000Z</thursdayEndTime>
+        <thursdayEndTime>17:00:00.000Z</thursdayEndTime>
         <thursdayStartTime>08:00:00.000Z</thursdayStartTime>
-        <timeZoneId>America/Panama</timeZoneId>
-        <tuesdayEndTime>20:00:00.000Z</tuesdayEndTime>
+        <timeZoneId>America/New_York</timeZoneId>
+        <tuesdayEndTime>17:00:00.000Z</tuesdayEndTime>
         <tuesdayStartTime>08:00:00.000Z</tuesdayStartTime>
-        <wednesdayEndTime>20:00:00.000Z</wednesdayEndTime>
+        <wednesdayEndTime>17:00:00.000Z</wednesdayEndTime>
         <wednesdayStartTime>08:00:00.000Z</wednesdayStartTime>
     </businessHours>
     <businessHours>
